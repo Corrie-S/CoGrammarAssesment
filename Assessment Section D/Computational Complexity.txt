@@ -1,0 +1,65 @@
+
+0 function doBracketsMatch(inputString, openingSymbol, closingSymbol) {
+1   let stack = new BracketStack()
+2   let isOpeningSymbol = isSymbol(openingSymbol)
+3   let isClosingSymbol = isSymbol(closingSymbol)
+4   for (let i = 0; i < inputString.length; i++) {
+5       let value = inputString[i]
+6       if (isOpeningSymbol(value)) stack.push()
+7       if (isClosingSymbol(value))
+8           if (stack.isEmpty()) return false
+9           else stack.pop()
+10  }
+11  return stack.isEmpty()
+12 }
+
+ 
+Time Complexity
+---------------
+
+c = 1 x Computational Time Unit
+N = Length of Input
+
+Line 1 = 1c
+Line 2 = 1c
+Line 3 = 1c
+Line 5 = 1c
+Line 6 = 2c
+Line 7 = 1c
+Line 8 = 1c
+Line 9 = 4c
+
+Line 4 = N-1(Line 5 + Line 6 + ... + Line 9) = N-1(9c)
+
+return = 1c
+
+O(doBracketMatch) = Line 1 + Line 2 + Line 3 + Line4 + return
+
+O(doBracketMatch) = (N-1)9c + 4c OR 9(N-1) + 4 
+
+
+Space Complexity
+----------------
+
+b = 1 byte
+N = Length of Input
+
+As the code is JavaScript the following is assumed:
+Type number = 8 bytes
+Type Boolean = 4 Bytes
+Type String = 2 bytes per character
+
+Line 1 = 8b
+Line 2 = 4b
+Line 3 = 4b
+Line 4 = 8b
+Line 5 = 2b
+Line 6, 7, 8 = 3 * 4b
+Function Declaration = N(2)b + 4b + 4b
+
+Memory Requirement = 8 + 4 + 4 + 8 + 2 + (3 * 4) + N(2) + 4 + 4
+= N(2) + 46 Bytes
+
+
+
+

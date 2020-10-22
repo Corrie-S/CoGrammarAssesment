@@ -1,0 +1,9 @@
+Hi Student,
+
+While you are almost there in completing the task, it is important to remember that anything that is typed in a comment line (starting with '//') is ignored when the code is executed, even code statements. That means that if you have a statement on a comment line it will not be executed when you run the code. 
+
+Furthermore, it is good practice and improves readability of your code (especially when trying to find bugs) when you put each statement on a new line instead of typing multiple statements on a single line. A simple rule of thumb would be to start on a new line after every semi-colon (;) and opening and closing braces ({}).
+
+One more thing to keep in mind when importing library functions/objects is that when you use only one or two functions/objects from a library, it is more efficient to import the specific function/object that you are using instead of the unused ones as well with wildcard(*) imports. Your code will use less memory and time when executing.
+
+Looking forward to seeing your improved code soon.
